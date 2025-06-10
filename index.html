@@ -1,0 +1,923 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Baidir Gold - Vente d'or et de bijoux depuis Paris, livraison partout en Europe.">
+  <title>Baidir Gold</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="fonts/AngelSweetHeart.ttf" as="font" type="font/ttf" crossorigin>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  
+
+
+  <style>/* Import des polices */
+@font-face {
+      font-family: 'Angel Sweet Heart';
+      src: url('fonts/AngelSweetHeart.ttf') format('truetype');
+    }
+
+/* Variables */
+:root {
+  --or: #d4af37;
+  --noir: #111;
+  --blanc: #fff;
+  --gris: #f4f4f4;
+  --texte: #222;
+  --ombre: rgba(0, 0, 0, 0.2);
+}
+
+/* Global */
+body {
+  margin: 0;
+  font-family: 'Times New Roman', serif;
+  background-image: url("Images/Fond.jpg");
+  background-size: cover;
+  color: var(--texte);
+  scroll-behavior: smooth;
+}
+h1, h2 {
+  margin: 0 0 1rem;
+}
+a {
+  text-decoration: none;
+}
+
+/* Header */
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #c59d5f;
+  color: white;
+  position: relative;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Angel Sweet Heart', cursive;
+}
+
+/* Hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+      /* Réinitialisation de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: white;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+/* Menu principal */
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Hamburger caché par défaut */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+    
+
+/* Navigation menu */
+.nav-links {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 60%;
+  background-color: #c59d5f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  transition: right 0.4s ease;
+  z-index: 1000;
+  font-family: 'Angel Sweet Heart', cursive;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/* Menu visible */
+.nav-links.active {
+  right: 0;
+}
+
+/* Optional: Hamburger animation when open */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+  
+  .goog-te-banner-frame.skiptranslate {
+    display: none !important;
+  }
+  body {
+    top: 0px !important;
+  }
+  .goog-logo-link {
+    display: none !important;
+  }
+  .goog-te-gadget {
+    font-family: sans-serif;
+    font-size: 14px;
+  }
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(60%);
+}
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: var(--blanc);
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero .btn {
+  background: #c59d5f;
+  color: var(--noir);
+  padding: 1rem 2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+.hero .btn:hover {
+  background: #c59e2a;
+}
+      
+      mains {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: var(--background);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+    }
+
+    h4 {
+      text-align: center;
+      color: var(--or);
+      margin-bottom: 2rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      position: relative;
+      padding-right: 25px;
+      font-weight: 600;
+      color: var(--gris-fonce);
+      user-select: none;
+    }
+
+    .faq-question::after {
+      content: '▼';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease;
+      font-size: 0.8rem;
+      color: var(--or);
+    }
+
+    .faq-question.active::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      color: var(--blanc);
+      margin-top: 0.5rem;
+    }
+
+    .faq-answer.open {
+      max-height: 500px; /* assez grand pour le contenu */
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 1rem;
+      }
+    }
+ .question {
+       box-sizing: border-box;
+       text-align: column;
+       color: var(--blanc);
+ }
+      
+      .faq-item {
+  margin: 10px 0;
+}
+.faq-question {
+  background-color: var(--noir);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Présentation */
+.presentation {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  margin: 50px;
+  padding: 0;
+  color: var(--blanc);
+  box-sizing: border-box;
+}
+      h2 {
+            color: var(--blanc);
+      }
+  .inline-image {
+  max-width: 100%;   /* L’image ne dépasse jamais la largeur du conteneur */
+  height: auto;      /* La hauteur s’ajuste proportionnellement */
+  display: block;    /* Pour avoir un bon comportement avec les marges */
+  margin: 20px auto; /* Marge au-dessus et en-dessous, centrée horizontalement */
+  font-size: 3rem;
+  font-weight: 600;
+  background: rgba(0,0,0,0.5);
+  padding: 20px 30px;
+  border-radius: 100px;
+}
+  
+.process {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.step {
+  text-align: center;
+  width: 100px;
+}
+.step img {
+  width: 60px;
+  height: 60px;
+}
+.flow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: sans-serif;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background: var(--noir);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  text-align: center;
+  padding: 5px;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.label {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.arrow {
+  font-size: 24px;
+  color: #c59d5f;
+}
+  
+  main {
+      flex: 0;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin: 20px;
+      border-radius: 100px;
+      overflow: auto;
+      box-sizing: border-box;
+    }
+  
+  .slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 0;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slider-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #c59d5f;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+/* Avis */
+.avis {
+  color: white;
+}
+#avis-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 300px;
+  margin: 1rem auto;
+  box-sizing: border-box;
+}
+
+#avis-form input, #avis-form textarea {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Times New Roman', serif;
+}
+
+#avis-form button {
+  padding: 0.5rem;
+  background-color: #c59d5f;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.avis-liste {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.avis-item {
+  background: #fff8dc;
+  padding: 1rem;
+  border-left: 4px solid gold;
+  border-radius: 6px;
+  font-family: 'Times New Roman', serif;
+}
+  p {
+        color: var(--blanc)
+  }
+/* Footer */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  color: #f2c94c;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #f2c94c;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+.footer .social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer .social-icons a:hover {
+  color: #f2c94c;
+}
+.footer .social-icons {
+  margin: 10px 0;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.footer .social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease; /* Pour que ça reste blanc même en png noir */
+}
+
+.footer .social-icons img:hover {
+  transform: scale(1.2);
+}
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    min-width: 100%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: var(--noir);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 1rem;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .menu.show {
+    display: flex;
+  }
+      
+}
+
+/* Animations apparition au scroll */
+.section {
+  padding: 100px 20px;
+  min-height: 100vh;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+      
+  </style>
+  
+  </head>
+<body>
+  
+ <header>
+       
+  <div class="logo">Baidir Gold</div>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="panier.html">Panier</a></li>
+      <li><a href="boutique.html">Boutique</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#FAQ">FAQ</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+       
+</header> 
+  
+  <!-- Hero -->  
+  <section class="hero">
+    <img src="Images/Hero.jpg" alt="Pépites et lingots d'or" class="hero-bg">
+    <div class="hero-content">
+      <h1 class="fade-in">Votre or, notre excellence</h1>
+      <a href="boutique.html" class="btn" data-aos="zoom-in">Découvrir nos produits</a>
+    </div>
+  </section>  
+      
+      <!-- Présentation -->  
+      <section class="section">
+  <section class="presentation" id="accueil">
+    <h2 class="fade-in">À propos</h2>
+    <p class="fade-in">Basée au cœur de Paris, ville reconnue pour son élégance et son savoir-faire en joaillerie, Baidir Gold est rapidement devenue une référence fiable pour la vente d’or pur et de bijoux d’exception. Nous allions un artisanat traditionnel avec des normes modernes pour vous garantir des produits d’une pureté et d’une authenticité sans compromis.
+
+Grâce à nos collaborations avec des raffineurs et maîtres joailliers de confiance, nous assurons une traçabilité complète et une qualité certifiée sur chaque gramme d’or et chaque bijou. Que vous soyez à Paris ou partout ailleurs en Europe, Baidir Gold vous accompagne avec sérieux et transparence pour vous offrir le meilleur.</p>
+  </section>
+    <main class="fade-in">
+  <div class="slider-container">
+    <img src="Images/Aff1.jpg" class="slide active" alt="Image 1">
+    <img src="Images/Aff2.jpg" class="slide" alt="Image 2">
+    <img src="Images/Aff3.jpg" class="slide" alt="Image 3">
+
+    <a href="boutique.html" class="slider-button">Consultez nos produits</a>
+  </div>
+</main>
+            <section class="presentation" id="accueil">
+    <h2 class="fade-in">Vous etes dans un autre pays d'Europe ?</h2>
+<p class="fade-in">Pas grave car <strong>Baidir Gold</strong> assure l'expédition sécurisée de vos achats directement dans l’ensemble des pays européens. Chaque commande est soigneusement emballée dans un packaging discret et sécurisé, conforme aux normes les plus strictes de transport d’objets précieux.
+    
+ Nos partenaires logistiques expérimentés garantissent une prise en charge rapide et un suivi rigoureux de chaque expédition, afin que vous receviez vos produits en toute sécurité, où que vous soyez en Europe.</p>
+        
+                  
+        <img src="Images/Image5.jpg" alt="Choisir" class="inline-image" data-aos="fade-left">
+        
+    <h2 class="fade-in">La Qualité et la Quantité</h2>
+    <p class="fade-in">Nous vous proposons de l’or pur en <strong>grande quantité</strong>, disponible en <strong>21 et 22 carats</strong> idéal pour les investisseurs, les commerçants et les passionnés de métaux précieux. Cet or, reconnu pour sa pureté et sa brillance, est soigneusement sélectionné pour répondre aux normes les plus strictes du marché international.
+
+Parallèlement, nous mettons en valeur le savoir-faire artisanal à travers une gamme exclusive de bijoux en or <strong>18 carats</strong>. Élégants, durables et intemporels, nos bijoux sont conçus pour sublimer chaque style avec finesse et distinction.
+
+Avec nous, vous avez l’assurance de la qualité, de la transparence et d’un service irréprochable. L’or et les bijoux que nous proposons ne sont pas seulement des objets de valeur, ce sont des symboles d’élégance et de prestige.</p>
+    <img src="Images/Image1.jpg" alt="Choisir" class="inline-image" data-aos="zoom-in">
+            </section>
+                  <section class="question">
+                  <mains>
+  <h2>FAQ</h2>
+
+  <div class="faq-item">
+    <div class="faq-question">Comment commander l'or ?</div>
+    <div class="faq-answer"> Une fois dans notre page boutique, entrez le grammage et valider en ajoutant au panier. Une fois dans le panier, vous pourrez commander via WhatsApp. 
+      </div>
+  </div>
+                        
+  <div class="faq-item" id="FAQ">
+    <div class="faq-question">Quels types de bijoux proposez-vous ? Et comment les vendez-vous ?</div>
+    <div class="faq-answer">
+      Nous proposons des bijoux en or 18 carats, notamment des bracelets, chaînes et des colliers. Nos bijoux sont tarifés selon leur grammage, qui sera mesuré en présentiel ou en ligne.    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Quels sont les délais d'expedition ?</div>
+    <div class="faq-answer">
+      Les expeditions sont généralement effectuées sous 12 à 24h, selon votre localisation.
+    </div>
+  </div>
+
+
+  <div class="faq-item">
+    <div class="faq-question">Proposez-vous une garantie sur vos bijoux ?</div>
+    <div class="faq-answer">
+      Oui, tous nos bijoux sont garantis 1 an contre les défauts de fabrication.
+    </div>
+  </div>
+</mains>
+                  </section>
+                  <h2 class="fade-in">Comment me faire expédier ?</h2>
+
+      
+      <section class="process-flow" data-aos="zoom-in">
+<div class="flow">
+  <div class="circle">
+    <span class="icon">🛒</span>
+    <span class="label">Commandez</span>
+  </div>
+  <div class="arrow">→</div>
+  <div class="circle">
+    <span class="icon">💳</span>
+    <span class="label">Payez</span>
+  </div>
+  <div class="arrow">→</div>
+  <div class="circle">
+    <span class="icon">📦</span>
+    <span class="label">Faites vous expédier</span>
+  </div>
+</div>
+      </section>
+      <section class="presentation" id="accueil">
+      <img src="Images/Image2.jpg" alt="Choisir" class="inline-image" data-aos="fade-right">
+      </section>
+  <section class="avis" id="avis">
+  <h2 class="fade-in">•Avis de nos clients</h2>
+
+  <form id="avis-form">
+    <input class="fade-in" type="text" id="nom" placeholder="Votre nom" required>
+    <textarea class="fade-in" id="message" placeholder="Votre avis" rows="4" required></textarea>
+    <button class="fade-in" type="submit">Envoyer</button>
+  </form>
+
+  <div class="avis-liste" id="avis-liste">
+    <!-- Les avis ajoutés apparaîtront ici -->
+  </div>
+</section>
+ </section>
+    <!-- Footer -->  
+  <footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-section">
+      <h3>À propos de Baidir Gold</h3>
+      <p>
+        Baidir Gold est votre partenaire de confiance pour l'achat et la vente d'or.
+        Nous proposons des services sécurisés, transparents et professionnels dans le domaine de l'or.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Liens utiles</h3>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="boutique.html">Notre boutique</a></li>
+        <li><a href="panier.html">Panier</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Informations légales</h3>
+      <ul>
+        <li><div class="faq-item">
+  <button class="faq-question">Mentions légales</button>
+  <div class="faq-answer">
+    <p>
+      Le site <strong>Baidir Gold</strong> est édité par un particulier à usage personnel et non commercial.  
+      Toute reproduction ou utilisation non autorisée des contenus (textes, images, logo) est interdite.  
+      Pour toute question, contactez-nous via WhatsApp ou email.
+    </p>
+  </div>
+</div></li>
+        <li><div class="faq-item">
+  <button class="faq-question">Conditions Générales de Vente (CGV)</button>
+  <div class="faq-answer">
+    <p>
+      Les prix sont affichés en euros et incluent toutes les taxes applicables.  
+      Les commandes sont traitées sous 24 à 48h après validation.  
+      Aucun retour ni remboursement après confirmation de l'achat sauf défaut majeur constaté.  
+      La livraison est assurée via un transporteur partenaire ou remise en main propre.  
+      En cas de litige, une solution amiable sera privilégiée.
+    </p>
+  </div>
+</div></li>
+        <li><div class="faq-items">
+  <button class="faq-question">Politique de confidentialité</button>
+  <div class="faq-answer">
+    <p>
+      Chez <strong>Baidir Gold</strong>, vos données personnelles (email, téléphone, panier) sont utilisées uniquement pour traiter vos commandes et vous contacter. Elles ne sont jamais revendues. Vous pouvez nous contacter à tout moment pour consulter, modifier ou supprimer vos informations.
+    </p>
+  </div>
+</div></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>📍 Paris, France</p>
+      <p>📧 baidirgold@gmail.com</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Baidir Gold – Tous droits réservés - Site crée par <a href="https://wa.me/237656785832" target="_blank"><strong>|DL DeV|.</strong></a></p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61567951911305" target="_blank">
+      <img src="Images/facebook.png" alt="Facebook"></a>
+      <a href="https://wa.me/33758738242" target="_blank">
+      <img src="Images/whatsapp.png" alt="WhatsApp"></a>
+    </div>
+  </div>
+</footer>
+    
+    <!-- Scripts -->  
+    <script>
+    const form = document.getElementById('avis-form');
+  const avisListe = document.getElementById('avis-liste');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nom = document.getElementById('nom').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (nom && message) {
+      // Création d’un nouvel élément avis
+      const avisItem = document.createElement('div');
+      avisItem.classList.add('avis-item');
+      avisItem.innerHTML = `<strong>${nom}</strong><p>${message}</p>`;
+
+      // Ajout en début de liste pour voir les derniers en premier
+      avisListe.prepend(avisItem);
+
+      // Réinitialiser le formulaire
+      form.reset();
+    }
+  });
+
+  
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  function nextSlide() {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }
+
+  setInterval(nextSlide, 4000);
+    
+  
+  function toggleMenu() {
+    document.querySelector('.menu').classList.toggle('show');
+    document.querySelector('.hamburger').classList.toggle('open');
+  }
+    
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  
+      AOS.init();
+      
+       // Accordéon FAQ
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const currentlyActive = document.querySelector('.faq-question.active');
+      if (currentlyActive && currentlyActive !== question) {
+        currentlyActive.classList.remove('active');
+        currentlyActive.nextElementSibling.classList.remove('open');
+      }
+      question.classList.toggle('active');
+      question.nextElementSibling.classList.toggle('open');
+    });
+  });
+      </script>
+</body>
+</html>
